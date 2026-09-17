@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: rgb(232, 238, 238);
+    min-height: 100vh;
+}
+
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+
+/* HEADING */
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+
+/* INPUT AREA */
+
+.input-container {
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+
+/* TITLE */
+
+#titleInput {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+
+/* DESCRIPTION */
+
+#descriptionInput {
+    display: block;
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-size: 16px;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+
+/* ADD BUTTON */
+
+#addBtn {
+    display: block;
+    width: 100%;
+    padding: 13px;
+
+    border: none;
+    outline: none;
+    border-radius: 7px;
+
+    background-color: #3da33d;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background-color: #60b160;
+}
+
+
+/* TODO LIST */
+
+#todoList {
+    width: 100%;
+    list-style: none;
+}
+
+
+/* TODO */
+
+.todo {
+    width: 100%;
+
+    background-color: white;
+
+    border: 1px solid #aaa;
+    border-radius: 10px;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: flex-start;
+
+    /* Checkbox aur content ke beech spacing */
+    gap: 10px;
+}
+
+
+/* CHECKBOX */
+
+.todo-checkbox {
+    width: 20px;
+    height: 20px;
+
+    margin-top: 4px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+
+/* TODO CONTENT */
+
+.todo-content {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* TITLE */
+
+.todo-title {
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-bottom: 6px;
+
+    word-wrap: break-word;
+}
+
+
+/* DESCRIPTION */
+
+.todo-description {
+    font-size: 15px;
+    color: #666;
+
+    line-height: 1.4;
+
+    word-wrap: break-word;
+}
+
+
+/* COMPLETED */
+
+.todo.completed .todo-title,
+.todo.completed .todo-description {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+
+/* ================================= */
+/* EDIT BUTTON */
+/* ================================= */
+
+.edit-btn {
+    border: none;
+    background: transparent;
+
+    /* GREEN TEXT */
+    color: #008000;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    /* Button ke andar kam space */
+    padding: 3px;
+
+    /* Button ke around spacing */
+    margin: 0;
+
+    flex-shrink: 0;
+}
+
+
+/* ================================= */
+/* REMOVE BUTTON */
+/* ================================= */
+
+.delete-btn {
+    border: none;
+    background: transparent;
+
+    /* RED TEXT */
+    color: #ff0000;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    /* Button ke andar kam space */
+    padding: 3px;
+
+    /* Edit aur Remove ke beech */
+    margin: 0;
+
+    flex-shrink: 0;
+}
+
+
+/* ================================= */
+/* EDIT + REMOVE HOVER */
+/* ================================= */
+
+.edit-btn:hover {
+    color: #006400;
+}
+
+.delete-btn:hover {
+    color: #cc0000;
+}
+
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+
+    .todo {
+        padding: 12px;
+
+        /* Mobile mein bhi compact spacing */
+        gap: 8px;
+    }
+
+
+    .todo-content {
+        min-width: 0;
+    }
+
+
+    .todo-title {
+        font-size: 18px;
+    }
+
+
+    .todo-description {
+        font-size: 14px;
+    }
+
+
+    .edit-btn,
+    .delete-btn {
+        font-size: 14px;
+
+        /* Dono buttons paas-paas */
+        padding: 2px;
+
+        margin: 0;
+    }
+}

@@ -4,23 +4,17 @@ const addBtn = document.getElementById("addBtn");
 const todoList = document.getElementById("todoList");
 
 
-// =====================================
 // GET TODOS FROM LOCAL STORAGE
-// =====================================
 
 let todos = JSON.parse(localStorage.getItem("todos")) || [];
 
 
-// =====================================
+
 // EDIT TODO ID
-// =====================================
 
 let editId = null;
 
-
-// =====================================
 // SAVE TODOS
-// =====================================
 
 function saveTodos() {
 
@@ -31,9 +25,7 @@ function saveTodos() {
 }
 
 
-// =====================================
 // DISPLAY TODOS
-// =====================================
 
 function displayTodos() {
 
@@ -56,9 +48,7 @@ function displayTodos() {
         }
 
 
-        // =================================
         // CHECKBOX
-        // =================================
 
         const checkbox = document.createElement("input");
 
@@ -80,9 +70,8 @@ function displayTodos() {
         });
 
 
-        // =================================
         // CONTENT
-        // =================================
+    
 
         const content = document.createElement("div");
 
@@ -110,10 +99,7 @@ function displayTodos() {
 
         content.appendChild(description);
 
-
-        // =================================
         // EDIT BUTTON
-        // =================================
 
         const editButton = document.createElement("button");
 
@@ -140,9 +126,7 @@ function displayTodos() {
         });
 
 
-        // =================================
         // REMOVE BUTTON
-        // =================================
 
         const deleteButton = document.createElement("button");
 
@@ -170,10 +154,8 @@ function displayTodos() {
 
         });
 
-
-        // =================================
         // ADD EVERYTHING TO LI
-        // =================================
+  
 
         li.appendChild(checkbox);
 
@@ -191,9 +173,7 @@ function displayTodos() {
 }
 
 
-// =====================================
 // ADD / UPDATE TODO
-// =====================================
 
 addBtn.addEventListener("click", function() {
 
@@ -202,10 +182,7 @@ addBtn.addEventListener("click", function() {
 
     const description = descriptionInput.value.trim();
 
-
-    // =================================
     // CHECK TITLE
-    // =================================
 
     if (title === "") {
 
@@ -217,9 +194,7 @@ addBtn.addEventListener("click", function() {
     }
 
 
-    // =================================
     // CHECK DESCRIPTION
-    // =================================
 
     if (description === "") {
 
@@ -231,9 +206,7 @@ addBtn.addEventListener("click", function() {
     }
 
 
-    // =================================
     // UPDATE TODO
-    // =================================
 
     if (editId !== null) {
 
@@ -259,10 +232,7 @@ addBtn.addEventListener("click", function() {
 
     }
 
-
-    // =================================
     // ADD NEW TODO
-    // =================================
 
     else {
 
@@ -299,9 +269,5 @@ addBtn.addEventListener("click", function() {
 
 });
 
-
-// =====================================
 // DISPLAY WHEN PAGE OPENS
-// =====================================
-
 displayTodos();
